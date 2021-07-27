@@ -7,6 +7,7 @@ import DestinationSearchScreen from "../screens/DestinationSearch";
 import GuestsScreen from "../screens/Guests";
 import HomeTabNavigator from "./HomeTabNavigator";
 import SearchResults from "../screens/SearchResults";
+import SearchResultsTabNavigator from "./SearchResultsTabNavigator";
 
 const Stack = createStackNavigator();
 
@@ -19,7 +20,7 @@ const Router = (props) => {
                 headerShown: false,
             }} />
 
-            <Stack.Screen name="SearchResults" component={SearchResults} options={{
+            <Stack.Screen name="SearchResults" component={SearchResultsTabNavigator} options={{
                 title: "Search your destination"
             }} />
 
