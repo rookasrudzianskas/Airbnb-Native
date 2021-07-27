@@ -1,6 +1,10 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
+    overallContainer: {
+        justifyContent: 'space-between',
+        height: "100%",
+    },
     row: {
         flexDirection: "row",
         justifyContent: "space-between",
@@ -41,7 +45,14 @@ const styles = StyleSheet.create({
         fontSize: 20,
         marginHorizontal: 20,
 
-    }
+    },
+    searchButtons: {
+
+    },
+    enterNewScreen: {
+
+    },
+
 
 });
 
