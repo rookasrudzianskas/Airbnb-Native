@@ -16,29 +16,29 @@ const DestinationSearchScreen = (props) => {
     return (
         <View style={styles.container}>
 
-            <View style={{ height: 500}}>
-            <GooglePlacesAutocomplete
-                placeholder='Where are you Going?'
-                onPress={(data, details = null) => {
-                    // 'details' is provided when fetchDetails = true
-                    console.log(data, details);
-                }}
-                styles={{
-                    textInput: {
-                        fontSize: 20,
-                        color: "black",
-                        marginBottom: 20,
-                    },
-                }}
-                query={{
-                    key: 'AIzaSyDYnkl8rGqpQ9-6XjrH3ssqNSDiJHpULGw',
-                    language: 'en',
-                    types: '(cities)',
-                }}
-                suppressDefaultStyles
-                renderRow={(item) => <SuggestionRow item={item} />}
-            />
-            </View>
+            {/*<View style={{ height: 500}}>*/}
+            {/*<GooglePlacesAutocomplete*/}
+            {/*    placeholder='Where are you Going?'*/}
+            {/*    onPress={(data, details = null) => {*/}
+            {/*        // 'details' is provided when fetchDetails = true*/}
+            {/*        console.log(data, details);*/}
+            {/*    }}*/}
+            {/*    styles={{*/}
+            {/*        textInput: {*/}
+            {/*            fontSize: 20,*/}
+            {/*            color: "black",*/}
+            {/*            marginBottom: 20,*/}
+            {/*        },*/}
+            {/*    }}*/}
+            {/*    query={{*/}
+            {/*        key: 'AIzaSyDYnkl8rGqpQ9-6XjrH3ssqNSDiJHpULGw',*/}
+            {/*        language: 'en',*/}
+            {/*        types: '(cities)',*/}
+            {/*    }}*/}
+            {/*    suppressDefaultStyles*/}
+            {/*    renderRow={(item) => <SuggestionRow item={item} />}*/}
+            {/*/>*/}
+            {/*</View>*/}
 
             <TextInput placeholder="Where are you Going? " value={inputText} onChangeText={(text) => setInputText(text)} style={styles.textInput} />
             <FlatList data={searchResults} renderItem={({item}) => (

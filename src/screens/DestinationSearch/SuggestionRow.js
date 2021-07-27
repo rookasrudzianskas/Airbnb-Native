@@ -8,7 +8,7 @@ import {useNavigation} from "@react-navigation/native";
 
 const SuggestionRow = ({item}) => (
 
-            <Pressable style={styles.row} onPress={() => navigation.navigate("Guests")}>
+            <Pressable style={styles.row} onPress={() => console.log("ROOOOKAS")}>
                 <View style={styles.iconContainer}>
                     <Entypo name="location-pin" size={30} color={"#050505"} />
                 </View>
