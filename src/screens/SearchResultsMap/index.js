@@ -1,7 +1,7 @@
 import React from 'react';
 import {View} from "react-native";
 import { StyleSheet, Text, Dimensions } from 'react-native';
-import MapView from 'react-native-maps';
+import MapView, {Marker} from 'react-native-maps';
 import styles from "./styles";
 
 const SearchResultsMap = () => {
@@ -13,7 +13,13 @@ const SearchResultsMap = () => {
                     longitude: -122.4324,
                     latitudeDelta: 0.0922,
                     longitudeDelta: 0.0421,
-                }} />
+                }} >
+
+                    <Marker
+                        coordinate={{latitude: 37.78825, longitude: -122.4324,}}
+                    />
+
+                </MapView>
             </View>
         </View>
     );
