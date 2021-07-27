@@ -8,7 +8,7 @@ const DestinationSearchScreen = (props) => {
     console.log(inputText)
 
     return (
-        <View>
+        <View style={styles.container}>
             <TextInput placeholder="Where are you Going? " value={inputText} onChangeText={(text) => setInputText(text)} style={styles.textInput} />
 
         </View>
