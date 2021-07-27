@@ -7,6 +7,7 @@ import feed from "./assets/data/feed";
 import SearchResults from "./src/screens/SearchResults";
 import DestinationSearchScreen from "./src/screens/DestinationSearch";
 import GuestsScreen from "./src/screens/Guests";
+import 'react-native-gesture-handler';
 
 const post1 = feed[0];
 const post2 = feed[1];
