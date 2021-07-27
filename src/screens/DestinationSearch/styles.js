@@ -7,6 +7,7 @@ const styles = StyleSheet.create({
     textInput: {
         fontSize: 20,
         color: "black",
+        marginBottom: 20,
     },
     row: {
       flexDirection: "row",
@@ -17,12 +18,12 @@ const styles = StyleSheet.create({
     },
     iconContainer: {
         backgroundColor: "#e7e7e7",
-        padding: 5,
+        padding: 7,
         borderRadius: 13,
         marginRight: 15,
     },
     locationText: {
-
+        fontWeight: "400",
     },
 });
 
