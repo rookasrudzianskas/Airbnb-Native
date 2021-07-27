@@ -7,14 +7,17 @@ import DestinationSearchScreen from "../screens/DestinationSearch";
 
 const Stack = createStackNavigator();
 
-function Router(props) {
+
+const Router = (props) => {
     return (
         <NavigationContainer>
             <Stack.Navigator>
-                <Stack.Screen name="Destination Search" component={Home} />
+                {/*<Stack.Screen name="Destination Search" component={Home} />*/}
+                <Stack.Screen name="Home" component={Home} />
+
             </Stack.Navigator>
         </NavigationContainer>
     );
-}
+};
 
 export default Router;

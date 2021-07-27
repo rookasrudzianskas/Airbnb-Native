@@ -9,6 +9,7 @@ import DestinationSearchScreen from "./src/screens/DestinationSearch";
 import GuestsScreen from "./src/screens/Guests";
 import 'react-native-gesture-handler';
 import Router from "./src/navigation/router";
+import {NavigationContainer} from "@react-navigation/native";
 
 
 const post1 = feed[0];
@@ -16,7 +17,8 @@ const post2 = feed[1];
 
 export default function App() {
   return (
-        <SafeAreaView>
+
+      <SafeAreaView>
           <StatusBar style="auto" />
             <Router />
         </SafeAreaView>
