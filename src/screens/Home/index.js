@@ -5,7 +5,7 @@ import styles from "./styles";
 const Home = () => {
     return (
         <View>
-            <ImageBackground source={"./assets/images/wallpaper.jpg"} style={styles.image} >
+            <ImageBackground source={require("../../../assets/images/wallpaper.jpg")} style={styles.image} >
 
             </ImageBackground>
         </View>
