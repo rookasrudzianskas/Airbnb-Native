@@ -3,13 +3,14 @@ import {View} from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "../screens/Home";
 import {EvilIcons, Feather, FontAwesome, FontAwesome5, Fontisto} from "@expo/vector-icons";
+import ExploreNavigator from "./ExploreNavigator";
 
 const Tab = createBottomTabNavigator();
 
 const HomeTabNavigator = () => {
     return (
         <Tab.Navigator tabBarOptions={{activeTintColor: "#f15454"}}>
-            <Tab.Screen name={"Explore"} component={Home} options={{tabBarIcon: ({color}) => (
+            <Tab.Screen name={"Explore"} component={ExploreNavigator} options={{tabBarIcon: ({color}) => (
                     <Fontisto name="search" size={25} color={color} />
                 )
             }} />
