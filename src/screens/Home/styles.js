@@ -5,10 +5,14 @@ const styles = StyleSheet.create({
         width: "100%",
         height: 500,
         resizeMode: "cover",
-        alignItems: "center",
+        justifyContent: "center",
     },
     title: {
-
+        fontSize: 80,
+        fontWeight: "bold",
+        color: "white",
+        width: '60%',
+        marginLeft: 25,
     }
 });
 
