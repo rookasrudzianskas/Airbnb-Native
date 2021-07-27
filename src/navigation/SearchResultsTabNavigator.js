@@ -13,7 +13,7 @@ const SearchResultsTabNavigator = (props) => {
                 backgroundColor: "#f15454",
             }
         }}>
-            <Tab.Screen name={"list"} component={SearchResults} />
+            <Tab.Screen name={"Listings"} component={SearchResults} />
             <Tab.Screen name={"map"} component={SearchResults} />
         </Tab.Navigator>
     );
