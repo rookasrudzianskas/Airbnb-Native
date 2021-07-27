@@ -19,14 +19,9 @@ const SearchResultsMap = () => {
                         coordinate={{latitude: 37.78825, longitude: -122.4324,}}
                      >
 
-                        <Callout style={styles.plainView}>
-                            <View>
-                                <Text>This is a plain view</Text>
-                            </View>
-                        </Callout>
-                        {/*<View style={{backgroundColor: "white", padding: 5}}>*/}
-                        {/*    <Text>Rookas</Text>*/}
-                        {/*</View>*/}
+                        <View style={{backgroundColor: "white", padding: 5, borderRadius: 10, borderColor: "grey", borderWidth: 1,}}>
+                            <Text>$300</Text>
+                        </View>
 
                     </Marker>
 
