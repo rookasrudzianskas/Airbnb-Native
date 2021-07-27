@@ -19,6 +19,7 @@ const SearchResultsMap = () => {
                         coordinate={{latitude: 37.78825, longitude: -122.4324,}}
                     />
 
+
                 </MapView>
             </View>
         </View>
@@ -26,3 +27,5 @@ const SearchResultsMap = () => {
 };
 
 export default SearchResultsMap;
+
+// map stuff
