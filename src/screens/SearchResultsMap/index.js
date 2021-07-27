@@ -4,6 +4,7 @@ import { StyleSheet, Text, Dimensions } from 'react-native';
 import MapView, {Callout, Marker} from 'react-native-maps';
 import styles from "./styles";
 import CustomMarker from "../../components/CustomMarker";
+import feed from "../../../assets/data/feed";
 
 
 const SearchResultsMap = () => {
@@ -17,7 +18,10 @@ const SearchResultsMap = () => {
                     longitudeDelta: 0.0421,
                 }} >
 
-                <CustomMarker />
+                    {feed.map(places => (
+                        <CustomMarker coordinate={feed.coordinate} price={feed.newPrice} />)
+                        )
+                    }
 
 
                 </MapView>
