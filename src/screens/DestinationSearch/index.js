@@ -4,6 +4,7 @@ import styles from "./styles";
 import searchResults from "../../../assets/data/search";
 import {Entypo} from "@expo/vector-icons";
 import {useNavigation} from "@react-navigation/native";
+import {GooglePlacesAutocomplete} from "react-native-google-places-autocomplete";
 
 const DestinationSearchScreen = (props) => {
 
@@ -13,6 +14,20 @@ const DestinationSearchScreen = (props) => {
 
     return (
         <View style={styles.container}>
+
+            <GooglePlacesAutocomplete
+                placeholder='Search'
+                onPress={(data, details = null) => {
+                    // 'details' is provided when fetchDetails = true
+                    console.log(data, details);
+                }}
+                query={{
+                    // key: 'AIzaSyB_RbepF664WVZgmZ0axaOIgy72UfTM0to',
+                    key: 'AIzaSyCuyNNQbJcq2x9nH6xNVORus9fUp69OKjo',
+                    language: 'en',
+                }}
+            />
+
             <TextInput placeholder="Where are you Going? " value={inputText} onChangeText={(text) => setInputText(text)} style={styles.textInput} />
             <FlatList data={searchResults} renderItem={({item}) => (
                 <Pressable style={styles.row} onPress={() => navigation.navigate("Guests")}>
