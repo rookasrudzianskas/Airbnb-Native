@@ -27,10 +27,6 @@ const Router = (props) => {
                     title: "How many people?"
                 }} />
 
-                <Stack.Screen name="Lists" component={SearchResults} options={{
-                    title: "Search Results"
-                }} />
-
                 {/*<Stack.Screen name="Home" component={Home} />*/}
 
             </Stack.Navigator>
