@@ -21,7 +21,6 @@ export default function App() {
       <NavigationContainer>
       <SafeAreaView>
           <StatusBar style="auto" />
-          <Home />
             <Router />
         </SafeAreaView>
       </NavigationContainer>
