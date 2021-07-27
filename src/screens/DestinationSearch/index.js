@@ -15,6 +15,7 @@ const DestinationSearchScreen = (props) => {
     return (
         <View style={styles.container}>
 
+            <View style={{ height: 500}}>
             <GooglePlacesAutocomplete
                 placeholder='Search'
                 onPress={(data, details = null) => {
@@ -27,6 +28,7 @@ const DestinationSearchScreen = (props) => {
                     language: 'en',
                 }}
             />
+            </View>
 
             <TextInput placeholder="Where are you Going? " value={inputText} onChangeText={(text) => setInputText(text)} style={styles.textInput} />
             <FlatList data={searchResults} renderItem={({item}) => (
