@@ -18,10 +18,14 @@ const post2 = feed[1];
 export default function App() {
   return (
 
+      <NavigationContainer>
       <SafeAreaView>
           <StatusBar style="auto" />
+          <Home />
             <Router />
         </SafeAreaView>
+      </NavigationContainer>
+
   );
 }
 
