@@ -33,6 +33,7 @@ const DestinationSearchScreen = (props) => {
                 query={{
                     key: 'AIzaSyDYnkl8rGqpQ9-6XjrH3ssqNSDiJHpULGw',
                     language: 'en',
+                    types: '(cities)',
                 }}
                 suppressDefaultStyles
                 renderRow={(item) => <SuggestionRow item={item} />}
@@ -41,12 +42,12 @@ const DestinationSearchScreen = (props) => {
 
             <TextInput placeholder="Where are you Going? " value={inputText} onChangeText={(text) => setInputText(text)} style={styles.textInput} />
             <FlatList data={searchResults} renderItem={({item}) => (
-                <View style={styles.row}>
+                <Pressable onPress={() => navigation.navigate("Guests")} style={styles.row}>
                     <View style={styles.iconContainer}>
                         <Entypo name={"location-pin"} size={30} />
                     </View>
                     <Text style={styles.locationText}>{item.description}</Text>
-                </View>
+                </Pressable>
             )}
               />
         </View>
