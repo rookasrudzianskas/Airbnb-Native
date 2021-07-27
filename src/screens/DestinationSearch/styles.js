@@ -16,7 +16,10 @@ const styles = StyleSheet.create({
         borderColor: "lightgrey",
     },
     iconContainer: {
-
+        backgroundColor: "#e7e7e7",
+        padding: 5,
+        borderRadius: 13,
+        marginRight: 15,
     },
     locationText: {
 
