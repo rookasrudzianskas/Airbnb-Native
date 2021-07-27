@@ -22,6 +22,6 @@ const DestinationSearchScreen = (props) => {
               />
         </View>
     );
-};
+}
 
 export default DestinationSearchScreen;
