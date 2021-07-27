@@ -1,9 +1,10 @@
 import React from 'react';
 import {View} from "react-native";
+import styles from "./styles";
 
-const Post = () => {
+const Post = (props) => {
     return (
-        <View>
+        <View style={styles.container}>
 
         </View>
     );
