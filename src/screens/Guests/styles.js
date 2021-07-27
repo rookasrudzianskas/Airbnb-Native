@@ -47,9 +47,18 @@ const styles = StyleSheet.create({
 
     },
     searchButtons: {
-
+        fontSize: 20,
+        color: "white",
+        fontWeight: "bold",
     },
     enterNewScreen: {
+        marginBottom: "10%",
+        backgroundColor: "#f15454",
+        alignItems: "center",
+        justifyContent: "center",
+        height: 50,
+        marginHorizontal: 20,
+        borderRadius: 15,
 
     },
 
