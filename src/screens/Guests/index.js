@@ -1,12 +1,15 @@
 import React, {useState} from 'react';
 import {Pressable, Text, View} from "react-native";
 import styles from "./styles";
+import {useNavigation} from "@react-navigation/native";
 
 const GuestsScreen = () => {
 
     const [adults, setAdults] = useState(0);
     const [children, setChildren] = useState(0);
     const [infants, setInfants] = useState(0);
+
+    const navigation = useNavigation();
 
     return (
         <View style={styles.overallContainer}>
@@ -79,7 +82,7 @@ const GuestsScreen = () => {
             </View>
 
             <View>
-                <Pressable style={styles.enterNewScreen}>
+                <Pressable style={styles.enterNewScreen} onPress={() => navigate.navigation("")}>
                     <Text style={styles.searchButtons}>Search!</Text>
                 </Pressable>
             </View>
