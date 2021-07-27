@@ -10,6 +10,8 @@ export default function App() {
       <StatusBar style="auto" />
         {/*<Home />*/}
         <Post />
+        <Post />
+        <Post />
     </SafeAreaView>
   );
 }
