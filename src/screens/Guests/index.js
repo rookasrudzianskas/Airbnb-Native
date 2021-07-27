@@ -11,17 +11,17 @@ const GuestsScreen = () => {
                     <Text style={styles.agesAdults}>Ages 13 or above</Text>
                 </View>
 
-                <View>
+                <View style={styles.buttons}>
 
                     <Pressable onPress={() => console.log("- is clicked")} style={styles.button}>
-                        <Text>-</Text>
+                        <Text style={styles.minusAndPlus}>-</Text>
                     </Pressable>
 
-                    <Text>0</Text>
+                    <Text style={styles.count}>0</Text>
 
 
                     <Pressable onPress={() => console.log("+ is clicked")} style={styles.button}>
-                        <Text>+</Text>
+                        <Text style={styles.minusAndPlus}>+</Text>
                     </Pressable>
 
                 </View>
