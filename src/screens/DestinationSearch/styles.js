@@ -7,7 +7,20 @@ const styles = StyleSheet.create({
     textInput: {
         fontSize: 20,
         color: "black",
-    }
+    },
+    row: {
+      flexDirection: "row",
+        alignItems: "center",
+        paddingVertical: 15,
+        borderBottomWidth: 1,
+        borderColor: "lightgrey",
+    },
+    iconContainer: {
+
+    },
+    locationText: {
+
+    },
 });
 
 export default styles;
