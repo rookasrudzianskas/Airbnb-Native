@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
         height: 500,
         resizeMode: "cover",
         justifyContent: "center",
+        backgroundColor: "white",
     },
     title: {
         fontSize: 80,

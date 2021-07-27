@@ -4,6 +4,7 @@ const styles = StyleSheet.create({
     overallContainer: {
         justifyContent: 'space-between',
         height: "100%",
+        backgroundColor: "white",
     },
     row: {
         flexDirection: "row",
