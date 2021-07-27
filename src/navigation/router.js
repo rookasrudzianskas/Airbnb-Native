@@ -11,7 +11,7 @@ function Router(props) {
     return (
         <NavigationContainer>
             <Stack.Navigator>
-                <Stack.Screen name="Destination Search" component={DestinationSearchScreen} />
+                <Stack.Screen name="Destination Search" component={Home} />
             </Stack.Navigator>
         </NavigationContainer>
     );
