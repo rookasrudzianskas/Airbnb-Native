@@ -18,8 +18,8 @@ const SearchResultsMap = () => {
                     longitudeDelta: 0.0421,
                 }} >
 
-                    {feed.map(places => (
-                        <CustomMarker coordinate={feed.coordinate} price={feed.newPrice} />)
+                    {feed.map(place => (
+                        <CustomMarker coordinate={place.coordinate} price={place.newPrice} />)
                         )
                     }
 
