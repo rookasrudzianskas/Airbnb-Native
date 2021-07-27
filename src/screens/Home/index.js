@@ -8,8 +8,8 @@ const Home = () => {
             <ImageBackground source={require("../../../assets/images/wallpaper.jpg")} style={styles.image} >
                 <Text style={styles.title}>Go Near</Text>
 
-                <Pressable>
-
+                <Pressable style={styles.button} onPress={() => console.log("Explore button clicked")}>
+                    <Text>Explore nearby stays</Text>
                 </Pressable>
             </ImageBackground>
         </View>
