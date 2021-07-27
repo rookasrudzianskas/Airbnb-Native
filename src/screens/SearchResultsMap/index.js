@@ -19,8 +19,8 @@ const SearchResultsMap = () => {
                         coordinate={{latitude: 37.78825, longitude: -122.4324,}}
                     >
 
-                        <View style={{width: '100%', height: '100%'}}>
-                            <Text>$300</Text>
+                        <View style={{backgroundColor: "orange", width: '100%', height: '100%'}}>
+                            <Text>Rookas</Text>
                         </View>
 
                     </Marker>
