@@ -3,6 +3,7 @@ import {View} from "react-native";
 import { StyleSheet, Text, Dimensions } from 'react-native';
 import MapView, {Callout, Marker} from 'react-native-maps';
 import styles from "./styles";
+import CustomMarker from "../../components/CustomMarker";
 
 
 const SearchResultsMap = () => {
@@ -16,7 +17,7 @@ const SearchResultsMap = () => {
                     longitudeDelta: 0.0421,
                 }} >
 
-
+                <CustomMarker />
 
 
                 </MapView>
