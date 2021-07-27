@@ -8,7 +8,7 @@ const Tab = createBottomTabNavigator();
 
 const HomeTabNavigator = () => {
     return (
-        <Tab.Navigator>
+        <Tab.Navigator tabBarOptions={{activeTintColor: "#f15454"}}>
             <Tab.Screen name={"Explore"} component={Home} options={{tabBarIcon: ({color}) => (
                     <Fontisto name="search" size={25} color={color} />
                 )
