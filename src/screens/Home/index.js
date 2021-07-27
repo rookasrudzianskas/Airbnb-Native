@@ -5,7 +5,7 @@ import { Fontisto } from '@expo/vector-icons';
 
 const Home = () => {
     return (
-        <SafeAreaView>
+        <>
             <View>
             <Pressable style={styles.searchButton} onPress={() => console.log("")}>
                 <Fontisto name="search" size={25} color={"#f15454"} />
@@ -23,7 +23,7 @@ const Home = () => {
                 </Pressable>
             </ImageBackground>
             </View>
-        </SafeAreaView>
+        </>
     );
 };
 
