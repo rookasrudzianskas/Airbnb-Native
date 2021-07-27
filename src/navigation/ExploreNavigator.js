@@ -19,7 +19,7 @@ const Router = (props) => {
                 headerShown: false,
             }} />
 
-            <Stack.Screen name="Search Results" component={SearchResults} options={{
+            <Stack.Screen name="SearchResults" component={SearchResults} options={{
                 title: "Search your destination"
             }} />
 
