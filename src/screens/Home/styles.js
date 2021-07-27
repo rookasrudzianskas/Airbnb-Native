@@ -13,7 +13,22 @@ const styles = StyleSheet.create({
         color: "white",
         width: '60%',
         marginLeft: 25,
-    }
+    },
+    button: {
+        backgroundColor: '#fff',
+        width: "50%",
+        height: 40,
+        marginTop: 25,
+        borderRadius: 10,
+        marginLeft: 25,
+        justifyContent: "center",
+        alignItems: "center",
+
+    },
+    buttonText: {
+        fontSize: 16,
+        fontWeight: "bold",
+    },
 });
 
 export default styles;

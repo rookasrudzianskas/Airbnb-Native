@@ -9,7 +9,7 @@ const Home = () => {
                 <Text style={styles.title}>Go Near</Text>
 
                 <Pressable style={styles.button} onPress={() => console.log("Explore button clicked")}>
-                    <Text>Explore nearby stays</Text>
+                    <Text style={styles.buttonText}>Explore nearby stays</Text>
                 </Pressable>
             </ImageBackground>
         </View>
