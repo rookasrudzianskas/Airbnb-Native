@@ -2,7 +2,10 @@ import React from 'react';
 import {Marker} from "react-native-maps";
 import {Text, View} from "react-native";
 
-const CustomMarker = () => {
+const CustomMarker = (props) => {
+
+    const {coordinate} = props;
+
     return (
          <Marker
              coordinate={{latitude: 37.78825, longitude: -122.4324,}}>
