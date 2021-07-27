@@ -17,14 +17,20 @@ const DestinationSearchScreen = (props) => {
 
             <View style={{ height: 500}}>
             <GooglePlacesAutocomplete
-                placeholder='Search'
+                placeholder='Where are you Going?'
                 onPress={(data, details = null) => {
                     // 'details' is provided when fetchDetails = true
                     console.log(data, details);
                 }}
+                styles={{
+                    textInput: {
+                        fontSize: 20,
+                        color: "black",
+                        marginBottom: 20,
+                    },
+                }}
                 query={{
-                    // key: 'AIzaSyB_RbepF664WVZgmZ0axaOIgy72UfTM0to',
-                    key: 'AIzaSyC2QhtACfVZ2cr9HVvxQuzxd3HT36NNK3Q',
+                    key: 'AIzaSyDYnkl8rGqpQ9-6XjrH3ssqNSDiJHpULGw',
                     language: 'en',
                 }}
             />
