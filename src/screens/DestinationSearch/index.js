@@ -24,7 +24,7 @@ const DestinationSearchScreen = (props) => {
                 }}
                 query={{
                     // key: 'AIzaSyB_RbepF664WVZgmZ0axaOIgy72UfTM0to',
-                    key: 'AIzaSyCuyNNQbJcq2x9nH6xNVORus9fUp69OKjo',
+                    key: 'AIzaSyC2QhtACfVZ2cr9HVvxQuzxd3HT36NNK3Q',
                     language: 'en',
                 }}
             />
