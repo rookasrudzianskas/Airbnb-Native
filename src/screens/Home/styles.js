@@ -29,6 +29,25 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: "bold",
     },
+
+    searchButton: {
+        backgroundColor: '#fff',
+        height: 40,
+        marginTop: 25,
+        borderRadius: 10,
+        marginLeft: 25,
+        justifyContent: "center",
+        flexDirection: "row",
+        alignItems: "center",
+        position: "absolute",
+        top: 50,
+        zIndex: 2,
+
+    },
+    searchButtonText: {
+        fontSize: 16,
+        fontWeight: "bold",
+    },
 });
 
 export default styles;
