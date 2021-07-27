@@ -8,20 +8,24 @@ import SearchResults from "./src/screens/SearchResults";
 import DestinationSearchScreen from "./src/screens/DestinationSearch";
 import GuestsScreen from "./src/screens/Guests";
 import 'react-native-gesture-handler';
+import { NavigationContainer } from '@react-navigation/native';
+
 
 const post1 = feed[0];
 const post2 = feed[1];
 
 export default function App() {
   return (
-    <SafeAreaView>
-      <StatusBar style="auto" />
-        {/*<Home />*/}
-        {/*<Post post={post2} />*/}
-        {/*<SearchResults />*/}
-        {/*<DestinationSearchScreen />*/}
-        <GuestsScreen />
-    </SafeAreaView>
+      <NavigationContainer>
+        <SafeAreaView>
+          <StatusBar style="auto" />
+            <Home />
+            {/*<Post post={post2} />*/}
+            {/*<SearchResults />*/}
+            {/*<DestinationSearchScreen />*/}
+            {/*<GuestsScreen />*/}
+        </SafeAreaView>
+      </NavigationContainer>
   );
 }
 
