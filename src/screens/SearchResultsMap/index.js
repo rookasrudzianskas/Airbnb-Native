@@ -1,7 +1,7 @@
 import React from 'react';
 import {View} from "react-native";
 import { StyleSheet, Text, Dimensions } from 'react-native';
-import MapView, {Marker} from 'react-native-maps';
+import MapView, {Callout, Marker} from 'react-native-maps';
 import styles from "./styles";
 
 const SearchResultsMap = () => {
@@ -17,10 +17,13 @@ const SearchResultsMap = () => {
 
                     <Marker
                         coordinate={{latitude: 37.78825, longitude: -122.4324,}}
-                    title="This is a native view"
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
-                    >
+                     >
 
+                        <Callout style={styles.plainView}>
+                            <View>
+                                <Text>This is a plain view</Text>
+                            </View>
+                        </Callout>
                         {/*<View style={{backgroundColor: "white", padding: 5}}>*/}
                         {/*    <Text>Rookas</Text>*/}
                         {/*</View>*/}

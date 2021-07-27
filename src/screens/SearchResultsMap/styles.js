@@ -13,6 +13,10 @@ const styles = StyleSheet.create({
         width: Dimensions.get('window').width,
         height: Dimensions.get('window').height,
     },
+    plainView: {
+        width: 60,
+
+    }
 });
 
 export default styles;
