@@ -6,6 +6,7 @@ import Home from "../screens/Home";
 import DestinationSearchScreen from "../screens/DestinationSearch";
 import GuestsScreen from "../screens/Guests";
 import HomeTabNavigator from "./HomeTabNavigator";
+import SearchResults from "../screens/SearchResults";
 
 const Stack = createStackNavigator();
 
@@ -26,6 +27,9 @@ const Router = (props) => {
                     title: "How many people?"
                 }} />
 
+                <Stack.Screen name="Lists" component={SearchResults} options={{
+                    title: "Search Results"
+                }} />
 
                 {/*<Stack.Screen name="Home" component={Home} />*/}
 
