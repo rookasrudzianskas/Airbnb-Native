@@ -6,6 +6,7 @@ import {useNavigation} from "@react-navigation/native";
 
 
 
+
 const SuggestionRow = ({item}) => (
 
             <Pressable style={styles.row} onPress={() => console.log("ROOOOKAS")}>
