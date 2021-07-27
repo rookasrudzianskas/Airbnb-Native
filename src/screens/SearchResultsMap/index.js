@@ -17,11 +17,13 @@ const SearchResultsMap = () => {
 
                     <Marker
                         coordinate={{latitude: 37.78825, longitude: -122.4324,}}
+                    title="This is a native view"
+                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
                     >
 
-                        <View style={{backgroundColor: "orange", width: '100%', height: '100%'}}>
-                            <Text>Rookas</Text>
-                        </View>
+                        {/*<View style={{backgroundColor: "white", padding: 5}}>*/}
+                        {/*    <Text>Rookas</Text>*/}
+                        {/*</View>*/}
 
                     </Marker>
 
