@@ -11,6 +11,7 @@ const Stack = createStackNavigator();
 
 function App() {
     return (
+
         <NavigationContainer>
                 <Router />
         </NavigationContainer>
