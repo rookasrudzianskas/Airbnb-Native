@@ -11,7 +11,7 @@ const Stack = createStackNavigator();
 const Router = (props) => {
     return (
             <Stack.Navigator>
-                <Stack.Screen name="Destination Search" component={DestinationSearchScreen} onPress={() => console.log("Rokas")} />
+                <Stack.Screen name="Destination Search" component={DestinationSearchScreen} />
                 {/*<Stack.Screen name="Home" component={Home} />*/}
 
             </Stack.Navigator>
