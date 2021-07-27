@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
         position: "absolute",
-        top: 50,
+        top: 20,
         zIndex: 100,
     },
     searchButtonText: {
