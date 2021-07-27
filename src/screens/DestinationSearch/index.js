@@ -5,6 +5,7 @@ import searchResults from "../../../assets/data/search";
 import {Entypo} from "@expo/vector-icons";
 import {useNavigation} from "@react-navigation/native";
 import {GooglePlacesAutocomplete} from "react-native-google-places-autocomplete";
+import SuggestionRow from "./SuggestionRow";
 
 const DestinationSearchScreen = (props) => {
 
@@ -33,18 +34,20 @@ const DestinationSearchScreen = (props) => {
                     key: 'AIzaSyDYnkl8rGqpQ9-6XjrH3ssqNSDiJHpULGw',
                     language: 'en',
                 }}
+                suppressDefaultStyles
+                renderRow={(item) => <SuggestionRow item={item} />}
             />
             </View>
 
             <TextInput placeholder="Where are you Going? " value={inputText} onChangeText={(text) => setInputText(text)} style={styles.textInput} />
             <FlatList data={searchResults} renderItem={({item}) => (
-                <Pressable style={styles.row} onPress={() => navigation.navigate("Guests")}>
+                <View style={styles.row}>
                     <View style={styles.iconContainer}>
-                        <Entypo name="location-pin" size={30} color={"#050505"} />
+                        <Entypo name={"location-pin"} size={30} />
                     </View>
                     <Text style={styles.locationText}>{item.description}</Text>
-                </Pressable>
-                )}
+                </View>
+            )}
               />
         </View>
     );
