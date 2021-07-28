@@ -13,7 +13,6 @@ const SearchResultsMap = () => {
     const [selectedPlaceId, setSelectedPlaceId] = useState(null);
 
     return (
-        <View>
             <View style={styles.container}>
                 <MapView style={styles.map} initialRegion={{
                     latitude: 28.3279822,
@@ -39,7 +38,6 @@ const SearchResultsMap = () => {
                 </View>
 
             </View>
-        </View>
     );
 };
 
