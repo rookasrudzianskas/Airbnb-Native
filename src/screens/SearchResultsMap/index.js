@@ -32,4 +32,4 @@ const SearchResultsMap = () => {
 
 export default SearchResultsMap;
 
-// map stuff
+// map stuff is working
