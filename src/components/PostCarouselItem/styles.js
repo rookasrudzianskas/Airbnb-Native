@@ -6,6 +6,15 @@ const styles = StyleSheet.create({
         padding: 5,
         // marginLeft: -60,
         marginHorizontal: 5,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 3,
+        },
+        shadowOpacity: 0.27,
+        shadowRadius: 4.65,
+
+        elevation: 6,
 
     },
     innerContainer: {
