@@ -14,7 +14,7 @@ async function signOut() {
 const Profile = () => {
     return (
         <SafeAreaView>
-            <View style={{height: "100%", display: "flex", justifyContent: "center", alignItems: "center"}}>
+            <View style={{height: "100%", display: "flex", justifyContent: "center", alignItems: "center", marginHorizontal: 20}}>
                 <Pressable onPress={signOut} style={{width: '100%', height: 40, backgroundColor: "#ea5151", alignItems: "center", justifyContent: "center"}}>
                     <Text style={{alignItems: "center", fontWeight: "bold", color: "white"}}>Log Out</Text>
                 </Pressable>
