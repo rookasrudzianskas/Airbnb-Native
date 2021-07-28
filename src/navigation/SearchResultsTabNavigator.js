@@ -11,6 +11,7 @@ const SearchResultsTabNavigator = (props) => {
 
 
     const route = useRoute();
+    const {guests} = route.params;
 
     return (
         <Tab.Navigator tabBarOptions={{
@@ -19,8 +20,19 @@ const SearchResultsTabNavigator = (props) => {
                 backgroundColor: "#f15454",
             }
         }}>
-            <Tab.Screen name={"Listings"} component={SearchResults} />
-            <Tab.Screen name={"map"} component={SearchResultsMap} />
+
+            <Tab.Screen name={"Listings"} >
+                {() => (
+                    <SearchResults guests={guests} />
+                )}
+            </Tab.Screen>
+
+            <Tab.Screen name={"map"} >
+                {() => (
+                    <SearchResultsMap guests={guests} />
+                )}
+            </Tab.Screen>
+
         </Tab.Navigator>
     );
 };

@@ -6,11 +6,10 @@ import {API, graphqlOperation} from "aws-amplify";
 import {listPosts} from "../../graphql/queries";
 import {useRoute} from "@react-navigation/native";
 
-const SearchResults = () => {
+const SearchResults = (props) => {
 
-    const route = useRoute();
-    console.log(route.params);
 
+    console.log(props);
     const [posts, setPosts] = useState([]);
     useEffect(() => {
         const fetchPosts = async () => {
