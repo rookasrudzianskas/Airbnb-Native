@@ -25,4 +25,5 @@ function App() {
 export default withAuthenticator(App);
 
 // the navigation works perfectly
+// app backend in the process
 
