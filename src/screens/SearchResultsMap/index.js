@@ -9,7 +9,7 @@ import {API, graphqlOperation} from "aws-amplify";
 import {listPosts} from "../../graphql/queries";
 
 
-const SearchResultsMap = () => {
+const SearchResultsMap = (props) => {
 
     const [selectedPlaceId, setSelectedPlaceId] = useState(null);
     const width = useWindowDimensions().width;
@@ -17,6 +17,7 @@ const SearchResultsMap = () => {
     const map = useRef();
     const viewConfig = useRef({itemVisiblePercentThreshold: 70});
     const [posts, setPosts] = useState([]);
+    const {guests} = props;
 
     const onViewChanged = useRef(({viewableItems}) => {
         if(viewableItems.length > 0) {
@@ -29,7 +30,13 @@ const SearchResultsMap = () => {
     useEffect(() => {
         const fetchPosts = async () => {
             try {
-                const postsResult = await API.graphql(graphqlOperation(listPosts));
+                const postsResult = await API.graphql(graphqlOperation(listPosts, {
+                    filter: {
+                        maxGuests: {
+                            ge: guests,
+                        }
+                    }
+                }));
                 setPosts(postsResult.data.listPosts.items);
 
             } catch (e) {
