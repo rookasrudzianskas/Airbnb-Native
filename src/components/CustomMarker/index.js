@@ -4,11 +4,11 @@ import {Text, View} from "react-native";
 
 const CustomMarker = (props) => {
 
-    const {coordinate, price} = props;
+    const {coordinate, price, onPress, isSelected} = props;
 
     return (
          <Marker
-             coordinate={coordinate}>
+             coordinate={coordinate} onPress={onPress}>
 
              <View style={{backgroundColor: "white", padding: 5, borderRadius: 20, borderColor: "grey", borderWidth: 1,}}>
                  <Text style={{fontWeight: "bold", fontSize: 10}}>${price}</Text>
