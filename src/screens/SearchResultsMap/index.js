@@ -13,6 +13,7 @@ const SearchResultsMap = () => {
     const [selectedPlaceId, setSelectedPlaceId] = useState(null);
     const width = useWindowDimensions().width;
     const flatList = useRef();
+    const map = useRef();
     const viewConfig = useRef({itemVisiblePercentThreshold: 70});
 
     const onViewChanged = useRef(({viewableItems}) => {
@@ -34,7 +35,7 @@ const SearchResultsMap = () => {
 
     return (
             <View style={styles.container}>
-                <MapView style={styles.map} initialRegion={{
+                <MapView style={styles.map} ref={map} initialRegion={{
                     latitude: 28.3279822,
                     // latitude: 37.78825,
                     longitude: -16.5124847,
