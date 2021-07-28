@@ -31,6 +31,17 @@ const SearchResultsMap = () => {
 
         const index = feed.findIndex(place => place.id === selectedPlaceId);
         flatList.current.scrollToIndex({index});
+
+        const selectedPlace = feed[index];
+        const region = {
+            latitude: selectedPlace.coordinate.latitude,
+            longitude: selectedPlace.coordinate.longitude,
+            latitudeDelta: 0.8,
+            longitudeDelta: 0.8,
+        }
+
+        map.current.animateToRegion(selectedPlace);
+
     }, [selectedPlaceId]);
 
     return (
