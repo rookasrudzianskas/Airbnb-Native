@@ -40,7 +40,7 @@ const SearchResultsMap = () => {
             longitudeDelta: 0.8,
         }
 
-        map.current.animateToRegion(selectedPlace);
+        map.current.animateToRegion(region);
 
     }, [selectedPlaceId]);
 
