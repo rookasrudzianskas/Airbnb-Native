@@ -4,8 +4,12 @@ import feed from "../../../assets/data/feed";
 import Post from "../../components/Post";
 import {API, graphqlOperation} from "aws-amplify";
 import {listPosts} from "../../graphql/queries";
+import {useRoute} from "@react-navigation/native";
 
 const SearchResults = () => {
+
+    const route = useRoute();
+    console.log(route.params);
 
     const [posts, setPosts] = useState([]);
     useEffect(() => {
