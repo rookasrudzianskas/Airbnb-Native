@@ -4,7 +4,7 @@ export default [
     image: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/1.jpg',
     type: 'Private Room',
     title: 'Bright room in the heart of the city',
-    longDescription: "Bright room in the heart of the city of the city of the city  of the city of the city of the city of the city of the city of the city of the city of the city of the city of the city of the city of the city of the city of the city of the.",
+    longDescription: "Bright room in the heart of the city of the city of the city  of the city of the city of the city of the city of the city of the city of the city of the city of the city of the city of the city of the city of the city of the city of the Bright room in the heart of the city of the city of the city  of the city of the city of the city of the city of the city of the city of the city of the city of the city of the city of the city of the city of the city of the city of theBright room in the heart of the city of the city of the city  of the city of the city of the city of the city of the city of the city of the city of the city of the city of the city of the city of the city of the city of the city of theBright room in the heart of the city of the city of the city  of the city of the city of the city of the city of the city of the city of the city of the city of the city of the city of the city of the city of the city of the city of the.",
     bed: 2,
     bedroom: 3,
     oldPrice: 25,
