@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
         },
         shadowOpacity: 0.27,
         shadowRadius: 4.65,
+        // done
 
         elevation: 6,
 
