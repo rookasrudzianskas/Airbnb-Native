@@ -7,7 +7,7 @@ type Post @model {
   description: String!
 
   bed: Int!
-  bedrooom: Int!
+  bedroom: Int!
   maxGuests: Int!
 
   oldPrice: Float

@@ -10,7 +10,7 @@ export const onCreatePost = /* GraphQL */ `
       title
       description
       bed
-      bedrooom
+      bedroom
       maxGuests
       oldPrice
       newPrice
@@ -30,7 +30,7 @@ export const onUpdatePost = /* GraphQL */ `
       title
       description
       bed
-      bedrooom
+      bedroom
       maxGuests
       oldPrice
       newPrice
@@ -50,7 +50,7 @@ export const onDeletePost = /* GraphQL */ `
       title
       description
       bed
-      bedrooom
+      bedroom
       maxGuests
       oldPrice
       newPrice

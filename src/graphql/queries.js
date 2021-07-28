@@ -10,7 +10,7 @@ export const getPost = /* GraphQL */ `
       title
       description
       bed
-      bedrooom
+      bedroom
       maxGuests
       oldPrice
       newPrice
@@ -35,7 +35,7 @@ export const listPosts = /* GraphQL */ `
         title
         description
         bed
-        bedrooom
+        bedroom
         maxGuests
         oldPrice
         newPrice
