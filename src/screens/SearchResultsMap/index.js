@@ -10,6 +10,7 @@ import feed from "../../../assets/data/feed";
 const SearchResultsMap = () => {
 
     const [selectedPlaceId, setSelectedPlaceId] = useState(null);
+
     return (
         <View>
             <View style={styles.container}>
@@ -25,7 +26,7 @@ const SearchResultsMap = () => {
                 }} >
 
                     {feed.map(place => (
-                        <CustomMarker isSelected={place.id === selectedPlaceId} coordinate={place.coordinate} price={place.newPrice} />)
+                        <CustomMarker isSelected={place.id === selectedPlaceId} onPress={() => setSelectedPlaceId(place.id)} coordinate={place.coordinate} price={place.newPrice} />)
                         )
                     }
 
