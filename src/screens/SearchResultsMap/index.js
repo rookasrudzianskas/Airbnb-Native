@@ -5,6 +5,7 @@ import MapView, {Callout, Marker} from 'react-native-maps';
 import styles from "./styles";
 import CustomMarker from "../../components/CustomMarker";
 import feed from "../../../assets/data/feed";
+import PostCarouselItem from "../../components/PostCarouselItem";
 
 
 const SearchResultsMap = () => {
@@ -32,6 +33,11 @@ const SearchResultsMap = () => {
 
 
                 </MapView>
+
+                <View style={{position: "absolute", bottom: 10}}>
+                    <PostCarouselItem />
+                </View>
+
             </View>
         </View>
     );
