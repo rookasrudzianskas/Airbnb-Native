@@ -10,8 +10,8 @@ const CustomMarker = (props) => {
          <Marker
              coordinate={coordinate} onPress={onPress}>
 
-             <View style={{backgroundColor: "white", padding: 5, borderRadius: 20, borderColor: "grey", borderWidth: 1,}}>
-                 <Text style={{fontWeight: "bold", fontSize: 10}}>${price}</Text>
+             <View style={{backgroundColor: isSelected ? "black" : "white", padding: 5, borderRadius: 20, borderColor: "grey", borderWidth: 1,}}>
+                 <Text style={{color: isSelected ? "white" : "black", fontWeight: "bold", fontSize: 10}}>${price}</Text>
              </View>
 
          </Marker>
