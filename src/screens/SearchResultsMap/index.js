@@ -13,6 +13,11 @@ const SearchResultsMap = () => {
     const [selectedPlaceId, setSelectedPlaceId] = useState(null);
     const width = useWindowDimensions().width;
     const flatList = useRef();
+    const viewConfig = useRef({itemVisiblePercentThreshold: 70});
+
+    const onViewChanged = useRef(({viewableItems}) => {
+        console.log(viewableItems);
+    })
 
     useEffect(() => {
         // only then selected Place id is changed, this fires on
@@ -47,7 +52,7 @@ const SearchResultsMap = () => {
 
                 <View style={{position: "absolute", bottom: 10}}>
                     {/*<PostCarouselItem post={feed[0]} />*/}
-                    <FlatList ref={flatList} snapToInterval={width - 60} snapToAlignment={'center'} decelerationRate={"fast"} data={feed} showsHorizontalScrollIndicator={false} showsVerticalScrollIndicator={false} horizontal renderItem={({item}) => <PostCarouselItem post={item} />} />
+                    <FlatList viewabilityConfig={viewConfig.current} onViewableItemsChanged={onViewChanged.current} ref={flatList} snapToInterval={width - 60} snapToAlignment={'center'} decelerationRate={"fast"} data={feed} showsHorizontalScrollIndicator={false} showsVerticalScrollIndicator={false} horizontal renderItem={({item}) => <PostCarouselItem post={item} />} />
                 </View>
 
             </View>
