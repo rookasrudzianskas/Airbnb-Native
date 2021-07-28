@@ -6,6 +6,8 @@ import styles from "./styles";
 import CustomMarker from "../../components/CustomMarker";
 import feed from "../../../assets/data/feed";
 import PostCarouselItem from "../../components/PostCarouselItem";
+import {API, graphqlOperation} from "aws-amplify";
+import {listPosts} from "../../graphql/queries";
 
 
 const SearchResultsMap = () => {
@@ -15,6 +17,7 @@ const SearchResultsMap = () => {
     const flatList = useRef();
     const map = useRef();
     const viewConfig = useRef({itemVisiblePercentThreshold: 70});
+    const [posts, setPosts] = useState([]);
 
     const onViewChanged = useRef(({viewableItems}) => {
         if(viewableItems.length > 0) {
@@ -23,19 +26,36 @@ const SearchResultsMap = () => {
         }
     })
 
+
+    useEffect(() => {
+        const fetchPosts = async () => {
+            try {
+                const postsResult = await API.graphql(graphqlOperation(listPosts));
+                setPosts(postsResult.data.listPosts.items);
+
+            } catch (e) {
+                console.log(e);
+            }
+        };
+
+        fetchPosts();
+
+    }, []);
+
+
     useEffect(() => {
         // only then selected Place id is changed, this fires on
         if(!selectedPlaceId ||  !flatList) {
             return;
         }
 
-        const index = feed.findIndex(place => place.id === selectedPlaceId);
+        const index = posts.findIndex(place => place.id === selectedPlaceId);
         flatList.current.scrollToIndex({index});
 
-        const selectedPlace = feed[index];
+        const selectedPlace = posts[index];
         const region = {
-            latitude: selectedPlace.coordinate.latitude,
-            longitude: selectedPlace.coordinate.longitude,
+            latitude: selectedPlace.latitude,
+            longitude: selectedPlace.longitude,
             latitudeDelta: 0.8,
             longitudeDelta: 0.8,
         }
@@ -57,8 +77,8 @@ const SearchResultsMap = () => {
                     // longitudeDelta: 0.0421,
                 }} >
 
-                    {feed.map(place => (
-                        <CustomMarker isSelected={place.id === selectedPlaceId} onPress={() => setSelectedPlaceId(place.id)} coordinate={place.coordinate} price={place.newPrice} />)
+                    {posts.map(place => (
+                        <CustomMarker isSelected={place.id === selectedPlaceId} onPress={() => setSelectedPlaceId(place.id)} coordinate={{latitude: place.latitude, longitude: place.longitude}} price={place.newPrice} />)
                         )
                     }
 
@@ -66,8 +86,8 @@ const SearchResultsMap = () => {
                 </MapView>
 
                 <View style={{position: "absolute", bottom: 10}}>
-                    {/*<PostCarouselItem post={feed[0]} />*/}
-                    <FlatList viewabilityConfig={viewConfig.current} onViewableItemsChanged={onViewChanged.current} ref={flatList} snapToInterval={width - 60} snapToAlignment={'center'} decelerationRate={"fast"} data={feed} showsHorizontalScrollIndicator={false} showsVerticalScrollIndicator={false} horizontal renderItem={({item}) => <PostCarouselItem post={item} />} />
+                    {/*<PostCarouselItem post={posts[0]} />*/}
+                    <FlatList viewabilityConfig={viewConfig.current} onViewableItemsChanged={onViewChanged.current} ref={flatList} snapToInterval={width - 60} snapToAlignment={'center'} decelerationRate={"fast"} data={posts} showsHorizontalScrollIndicator={false} showsVerticalScrollIndicator={false} horizontal renderItem={({item}) => <PostCarouselItem post={item} />} />
                 </View>
 
             </View>
