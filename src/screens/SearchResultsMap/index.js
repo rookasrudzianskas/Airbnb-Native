@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {FlatList, useWindowDimensions, View} from "react-native";
 import { StyleSheet, Text, Dimensions } from 'react-native';
 import MapView, {Callout, Marker} from 'react-native-maps';
@@ -12,10 +12,16 @@ const SearchResultsMap = () => {
 
     const [selectedPlaceId, setSelectedPlaceId] = useState(null);
     const width = useWindowDimensions().width;
+    const flatList = useRef();
 
     useEffect(() => {
         // only then selected Place id is changed, this fires on
+        if(!selectedPlaceId ||  !flatList) {
+            return;
+        }
 
+        const index = feed.findIndex(place => place.id === selectedPlaceId);
+        flatList.current.scrollToIndex({index});
     }, [selectedPlaceId]);
 
     return (
@@ -41,7 +47,7 @@ const SearchResultsMap = () => {
 
                 <View style={{position: "absolute", bottom: 10}}>
                     {/*<PostCarouselItem post={feed[0]} />*/}
-                    <FlatList snapToInterval={width - 60} snapToAlignment={'center'} decelerationRate={"fast"} data={feed} showsHorizontalScrollIndicator={false} showsVerticalScrollIndicator={false} horizontal renderItem={({item}) => <PostCarouselItem post={item} />} />
+                    <FlatList ref={flatList} snapToInterval={width - 60} snapToAlignment={'center'} decelerationRate={"fast"} data={feed} showsHorizontalScrollIndicator={false} showsVerticalScrollIndicator={false} horizontal renderItem={({item}) => <PostCarouselItem post={item} />} />
                 </View>
 
             </View>
