@@ -4,7 +4,6 @@ import { StyleSheet, Text, Dimensions } from 'react-native';
 import MapView, {Callout, Marker} from 'react-native-maps';
 import styles from "./styles";
 import CustomMarker from "../../components/CustomMarker";
-import feed from "../../../assets/data/feed";
 import PostCarouselItem from "../../components/PostCarouselItem";
 import {API, graphqlOperation} from "aws-amplify";
 import {listPosts} from "../../graphql/queries";
