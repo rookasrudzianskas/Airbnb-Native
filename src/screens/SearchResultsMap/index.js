@@ -25,7 +25,7 @@ const SearchResultsMap = () => {
                 }} >
 
                     {feed.map(place => (
-                        <CustomMarker coordinate={place.coordinate} price={place.newPrice} />)
+                        <CustomMarker isSelected={place.id === selectedPlaceId} coordinate={place.coordinate} price={place.newPrice} />)
                         )
                     }
 
