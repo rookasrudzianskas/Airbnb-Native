@@ -1,12 +1,14 @@
 import React from 'react';
 import {Image, Text, View} from "react-native";
 import styles from "./styles";
+import {ScrollView} from "react-native";
 
 const Post = (props) => {
 
     const post = props.post;
 
     return (
+        <ScrollView>
         <View style={styles.container}>
             <Image style={styles.image} source={{ uri: post.image}} />
 
@@ -25,6 +27,7 @@ const Post = (props) => {
 
             <Text style={styles.longDescription}>{post.longDescription}</Text>
         </View>
+        </ScrollView>
     );
 };
 
