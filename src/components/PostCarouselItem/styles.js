@@ -4,8 +4,8 @@ const styles = StyleSheet.create({
     container: {
         height: 120,
         padding: 5,
-        marginLeft: -60,
-        marginHorizontal: 70,
+        // marginLeft: -60,
+        marginHorizontal: 5,
 
     },
     innerContainer: {
@@ -26,11 +26,10 @@ const styles = StyleSheet.create({
         color: "#5b5b5b",
     },
     description: {
-        fontSize: 18,
-        lineHeight: 26,
+        fontSize: 15,
     },
     prices: {
-        fontSize: 18,
+        fontSize: 15,
         marginVertical: 10,
     },
     oldPrice: {

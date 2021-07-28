@@ -33,7 +33,7 @@ const SearchResultsMap = () => {
 
                 </MapView>
 
-                <View style={{position: "absolute", bottom: 20}}>
+                <View style={{position: "absolute", bottom: 10}}>
                     {/*<PostCarouselItem post={feed[0]} />*/}
                     <FlatList data={feed} showsHorizontalScrollIndicator={false} showsVerticalScrollIndicator={false} horizontal renderItem={({item}) => <PostCarouselItem post={item} />} />
                 </View>
