@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {FlatList, useWindowDimensions, View} from "react-native";
 import { StyleSheet, Text, Dimensions } from 'react-native';
 import MapView, {Callout, Marker} from 'react-native-maps';
@@ -12,6 +12,11 @@ const SearchResultsMap = () => {
 
     const [selectedPlaceId, setSelectedPlaceId] = useState(null);
     const width = useWindowDimensions().width;
+
+    useEffect(() => {
+        // only then selected Place id is changed, this fires on
+
+    }, [selectedPlaceId]);
 
     return (
             <View style={styles.container}>
