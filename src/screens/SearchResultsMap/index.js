@@ -16,8 +16,7 @@ const SearchResultsMap = (props) => {
     const flatList = useRef();
     const map = useRef();
     const viewConfig = useRef({itemVisiblePercentThreshold: 70});
-    const [posts, setPosts] = useState([]);
-    const {guests} = props;
+    const {posts} = props;
 
     const onViewChanged = useRef(({viewableItems}) => {
         if(viewableItems.length > 0) {
@@ -26,27 +25,6 @@ const SearchResultsMap = (props) => {
         }
     })
 
-
-    useEffect(() => {
-        const fetchPosts = async () => {
-            try {
-                const postsResult = await API.graphql(graphqlOperation(listPosts, {
-                    filter: {
-                        maxGuests: {
-                            ge: guests,
-                        }
-                    }
-                }));
-                setPosts(postsResult.data.listPosts.items);
-
-            } catch (e) {
-                console.log(e);
-            }
-        };
-
-        fetchPosts();
-
-    }, []);
 
 
     useEffect(() => {
