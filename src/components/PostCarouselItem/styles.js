@@ -4,11 +4,14 @@ const styles = StyleSheet.create({
     container: {
         height: 120,
         padding: 5,
-        marginLeft: 70,
+        marginLeft: "13%",
 
     },
     innerContainer: {
         flexDirection: 'row',
+        backgroundColor: "white",
+        borderRadius: 10,
+        overflow: 'hidden',
 
     },
     image: {
