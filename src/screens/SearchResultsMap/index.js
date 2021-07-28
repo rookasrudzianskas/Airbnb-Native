@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View} from "react-native";
+import {FlatList, View} from "react-native";
 import { StyleSheet, Text, Dimensions } from 'react-native';
 import MapView, {Callout, Marker} from 'react-native-maps';
 import styles from "./styles";
@@ -33,8 +33,9 @@ const SearchResultsMap = () => {
 
                 </MapView>
 
-                <View style={{position: "absolute", bottom: 30}}>
-                    <PostCarouselItem post={feed[0]} />
+                <View style={{position: "absolute", bottom: 20}}>
+                    {/*<PostCarouselItem post={feed[0]} />*/}
+                    <FlatList data={feed} showsHorizontalScrollIndicator={false} showsVerticalScrollIndicator={false} horizontal renderItem={({item}) => <PostCarouselItem post={item} />} />
                 </View>
 
             </View>
