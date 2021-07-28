@@ -6,6 +6,7 @@ import {EvilIcons, Feather, FontAwesome, FontAwesome5, Fontisto} from "@expo/vec
 import ExploreNavigator from "./ExploreNavigator";
 import SearchResultsMap from "../screens/SearchResultsMap";
 import PostScreen from "../screens/PostScreen";
+import Profile from "../screens/Profile";
 
 const Tab = createBottomTabNavigator();
 
@@ -34,7 +35,7 @@ const HomeTabNavigator = () => {
                 )
             }} />
 
-            <Tab.Screen name={"Profile"} component={Home} options={{tabBarIcon: ({color}) => (
+            <Tab.Screen name={"Profile"} component={Profile} options={{tabBarIcon: ({color}) => (
                     <EvilIcons name="user" size={25} color={color} />
                 )
             }} />
