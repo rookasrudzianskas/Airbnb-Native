@@ -35,7 +35,7 @@ const SearchResultsMap = () => {
                 </MapView>
 
                 <View style={{position: "absolute", bottom: 10}}>
-                    <PostCarouselItem />
+                    <PostCarouselItem post={feed[0]} />
                 </View>
 
             </View>
