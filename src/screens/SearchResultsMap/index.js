@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {View} from "react-native";
 import { StyleSheet, Text, Dimensions } from 'react-native';
 import MapView, {Callout, Marker} from 'react-native-maps';
@@ -8,14 +8,20 @@ import feed from "../../../assets/data/feed";
 
 
 const SearchResultsMap = () => {
+
+    const [selectedPlaceId, setSelectedPlaceId] = useState(null);
     return (
         <View>
             <View style={styles.container}>
                 <MapView style={styles.map} initialRegion={{
-                    latitude: 37.78825,
-                    longitude: -122.4324,
-                    latitudeDelta: 0.0922,
-                    longitudeDelta: 0.0421,
+                    latitude: 28.3279822,
+                    // latitude: 37.78825,
+                    longitude: -16.5124847,
+                    // longitude: -122.4324,
+                    latitudeDelta: 0.0,
+                    // latitudeDelta: 0.0922,
+                    longitudeDelta: 0.0,
+                    // longitudeDelta: 0.0421,
                 }} >
 
                     {feed.map(place => (
