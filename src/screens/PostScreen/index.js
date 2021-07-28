@@ -1,8 +1,8 @@
 import React from 'react';
 import {SafeAreaView, Text, View} from "react-native";
-import Post from "../../components/Post";
 import feed from "../../../assets/data/feed";
 import styles from "./styles";
+import DetailedPost from "../../components/DetailedPost";
 
 const PostScreen = (props) => {
 
@@ -11,7 +11,7 @@ const PostScreen = (props) => {
     return (
         <SafeAreaView style={{backgroundColor: "white", height: "100%"}}>
             <View style={styles.container}>
-                <Post post={post} />
+                <DetailedPost post={post} />
             </View>
         </SafeAreaView>
     );
