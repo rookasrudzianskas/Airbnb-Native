@@ -10,7 +10,9 @@ const Post = (props) => {
 
     const goToPost = () => {
 
-        navigation.navigate("PostPage")
+        navigation.navigate("PostPage", {
+            postId: post.id,
+        })
     }
 
     return (

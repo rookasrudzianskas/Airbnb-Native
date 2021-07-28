@@ -3,10 +3,13 @@ import {SafeAreaView, Text, View} from "react-native";
 import feed from "../../../assets/data/feed";
 import styles from "./styles";
 import DetailedPost from "../../components/DetailedPost";
+import {useRoute} from "@react-navigation/native";
 
 const PostScreen = (props) => {
 
-    const post = feed[0];
+    const route = useRoute();
+
+    const post = feed.find(place => place.id === route.params.postId);
 
     return (
         <SafeAreaView style={{backgroundColor: "white", height: "100%"}}>
