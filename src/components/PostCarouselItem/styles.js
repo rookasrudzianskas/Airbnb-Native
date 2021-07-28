@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
     container: {
         height: 120,
         padding: 5,
-        marginLeft: "13%",
+        marginLeft: -60,
 
     },
     innerContainer: {

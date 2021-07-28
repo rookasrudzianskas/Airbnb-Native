@@ -1,13 +1,14 @@
 import React from 'react';
-import {Image, Text, View} from "react-native";
+import {Image, Text, useWindowDimensions, View} from "react-native";
 import styles from "./styles";
 
 const PostCarouselItem = (props) => {
 
     const post = props.post;
+    const width = useWindowDimensions().width;
 
     return (
-        <View style={styles.container}>
+        <View style={[styles.container, {width: width - 60}]}>
             <View style={styles.innerContainer}>
                 <Image style={styles.image} source={{ uri: post.image}} />
 
