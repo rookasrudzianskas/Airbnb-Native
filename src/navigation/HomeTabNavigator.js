@@ -5,6 +5,7 @@ import Home from "../screens/Home";
 import {EvilIcons, Feather, FontAwesome, FontAwesome5, Fontisto} from "@expo/vector-icons";
 import ExploreNavigator from "./ExploreNavigator";
 import SearchResultsMap from "../screens/SearchResultsMap";
+import PostScreen from "../screens/PostScreen";
 
 const Tab = createBottomTabNavigator();
 
@@ -12,7 +13,7 @@ const HomeTabNavigator = () => {
     return (
         <Tab.Navigator tabBarOptions={{activeTintColor: "#f15454"}}>
             {/*change*/}
-            <Tab.Screen name={"Explore"} component={SearchResultsMap} options={{tabBarIcon: ({color}) => (
+            <Tab.Screen name={"Explore"} component={PostScreen} options={{tabBarIcon: ({color}) => (
                     <Fontisto name="search" size={25} color={color} />
                 )
             }} />
