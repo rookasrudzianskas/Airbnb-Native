@@ -96,4 +96,4 @@ const SearchResultsMap = () => {
 
 export default SearchResultsMap;
 
-// map stuff is working
+// map stuff is working from api
