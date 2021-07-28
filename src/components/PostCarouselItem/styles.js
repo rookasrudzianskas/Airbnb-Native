@@ -6,8 +6,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
     },
     image: {
-        width: '100%',
-        aspectRatio: 3/2,
+        height: '100%',
+        aspectRatio: 1,
         resizeMode: "cover",
         borderRadius: 20,
     },
