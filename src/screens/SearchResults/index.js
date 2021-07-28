@@ -9,6 +9,7 @@ import {useRoute} from "@react-navigation/native";
 const SearchResults = (props) => {
 
     const {guests} = props;
+    // const {viewport} = props;
 
 
     const [posts, setPosts] = useState([]);
@@ -17,8 +18,16 @@ const SearchResults = (props) => {
             try {
                 const postsResult = await API.graphql(graphqlOperation(listPosts, {
                     filter: {
-                        maxGuests: {
-                            ge: guests,
+                        and: {
+                            maxGuests: {
+                                ge: guests,
+                            },
+                            latitude: {
+                                between: [27.99643616103738, 28.617893425551618],
+                            },
+                            longitude: {
+                                between: [-16.945665756405603, -16.134050770346267],
+                            }
                         }
                     }
                 }));
