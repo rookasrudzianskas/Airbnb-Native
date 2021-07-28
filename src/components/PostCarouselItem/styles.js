@@ -5,6 +5,7 @@ const styles = StyleSheet.create({
         height: 120,
         padding: 5,
         marginLeft: -60,
+        marginHorizontal: 70,
 
     },
     innerContainer: {
