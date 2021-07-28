@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {FlatList, View} from "react-native";
+import {FlatList, useWindowDimensions, View} from "react-native";
 import { StyleSheet, Text, Dimensions } from 'react-native';
 import MapView, {Callout, Marker} from 'react-native-maps';
 import styles from "./styles";
@@ -11,6 +11,7 @@ import PostCarouselItem from "../../components/PostCarouselItem";
 const SearchResultsMap = () => {
 
     const [selectedPlaceId, setSelectedPlaceId] = useState(null);
+    const width = useWindowDimensions().width;
 
     return (
             <View style={styles.container}>
@@ -35,7 +36,7 @@ const SearchResultsMap = () => {
 
                 <View style={{position: "absolute", bottom: 10}}>
                     {/*<PostCarouselItem post={feed[0]} />*/}
-                    <FlatList data={feed} showsHorizontalScrollIndicator={false} showsVerticalScrollIndicator={false} horizontal renderItem={({item}) => <PostCarouselItem post={item} />} />
+                    <FlatList snapToInterval={width - 60} snapToAlignment={'center'} decelerationRate={"fast"} data={feed} showsHorizontalScrollIndicator={false} showsVerticalScrollIndicator={false} horizontal renderItem={({item}) => <PostCarouselItem post={item} />} />
                 </View>
 
             </View>
