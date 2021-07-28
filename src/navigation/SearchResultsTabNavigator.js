@@ -12,6 +12,7 @@ const SearchResultsTabNavigator = (props) => {
 
     const route = useRoute();
     const {guests} = route.params;
+    // const {viewport} = route.params;
 
     return (
         <Tab.Navigator tabBarOptions={{
